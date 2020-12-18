@@ -10,20 +10,19 @@ public class Tren {
         Scanner vagonTahmini = new Scanner(System.in);
         int tahmin = vagonTahmini.nextInt(10);
         if (tahmin < 11 && tahmin > 0) {
-            for (int i = 1; i <= 4; i++) {
+            for (int i = 100; i >= 25; i-=25) {
                 if (tahmin == Vagon.kacaginVagonu) {
-                    System.out.println("Tebrikler " + i + ". tahminizde buldunuz.");
-                    System.out.println(" Puaniniz " + 100);
+                    System.out.println("Tebrikler. Bildiniz.. Puaniniz : " + i );
                     break;
                 } else if (Vagon.kacaginVagonu > tahmin) {
-                    System.out.println("Daha buyuk bir deger giriniz.");
+                    System.out.println("Malesef arka vagonlarda. ");
                 } else {
-                    System.out.println("Daha kucuk bir deger giriniz.");
+                    System.out.println("Malesef on vagonlarda. ");
                 }
-                if (i != 4) {
+                if (i != 25) {
                     tahmin = vagonTahmini.nextInt(10);
                 } else {
-                    System.out.println("Hakkiniz bitti kacagi bulamadiniz . Puaniniz " + 0);
+                    System.out.println("Malesef bulamadiniz. Hakkiniz bitti. Puaniniz : " + 0);
                 }
             }
         }
